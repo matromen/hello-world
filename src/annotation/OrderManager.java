@@ -22,8 +22,8 @@ public class OrderManager {
 		System.out.println("OrderManager() called");
 	}
 	
-	public void order() {
-		Money money = new Money(1000);
+	public void order(Money money) {
+		//Money money = new Money(1000);
 		System.out.println("OrderManager.order : I made " + money.getAmonunt());
 		System.out.println("OrderManager.order : I payed " + money.getAmonunt());
 		

@@ -7,5 +7,9 @@ public class MainApp {
 	public static void main(String[] args) {
 		ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
 		
+		OrderManager manager = context.getBean("orderManager", OrderManager.class);
+		System.out.println("manager : " + manager);
+		
+		manager.order(context.getBean("payMoney", Money.class));
 	}
 }
